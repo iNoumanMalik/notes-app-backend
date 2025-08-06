@@ -4,7 +4,6 @@ const notesSchema = mongoose.Schema({
     title: {type: String, required:true},
     body: String,
     tags: [String]
-
 },{timestamps:true})
 
 export default mongoose.model('Note',notesSchema)

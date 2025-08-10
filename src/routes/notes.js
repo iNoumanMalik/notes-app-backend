@@ -7,7 +7,7 @@ const router = new Router();
 router.use(auth);
 
 router.get('/',async(req,res)=>{
-    const notes = await Notes.find({userId: req.user.id}.sort('-updatedAt'))
+    const notes = await Notes.find({userId: req.user.id}).sort('-updatedAt')
     res.json(notes)
 })
 
